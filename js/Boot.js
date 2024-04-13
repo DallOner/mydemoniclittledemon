@@ -15,7 +15,7 @@ class Boot extends Phaser.Scene {
 		// Function to add the object to the game
 		this.add.text(20, 20, 'Loading ...');
 		console.log('Game Booted...');
-		this.scene.start('menu');
+		this.scene.start('load');
 	}
 
 	update(){
