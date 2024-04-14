@@ -61,7 +61,7 @@ class Game extends Phaser.Scene {
             this.nextRound();
         };
 
-        this.startPuzzle('grid-test', 4, 4);
+        this.startPuzzle('gly-01', 4, 4);
 	}
 
 	drawGrid() {
@@ -69,14 +69,18 @@ class Game extends Phaser.Scene {
 		let bgFloor = this.add.image(0,0, 'bg-floor');
 		bgFloor.setOrigin(0,0);
 
+        //let bgBoard = this.add.image(0,0, 'bg-board');
+		//bgBoard.setOrigin(0,0);
+
+        let bgGrid = this.add.image(0,0, 'bg-gameplay-grid');
+        bgGrid.setOrigin(0);
+        bgGrid.setAlpha(.4);
+
 		let bgCircle = this.add.image(0,0, 'bg-circle');
 		bgCircle.setOrigin(0,0);
 
-        const rm_shadow = this.add.image(0, 0, 'bg-shadow');
-        rm_shadow.setOrigin(0);
-
-		//let bgBoard = this.add.image(0,0, 'bg-board');
-		//bgBoard.setOrigin(0,0);
+        //const rm_shadow = this.add.image(0, 0, 'bg-shadow');
+        //rm_shadow.setOrigin(0);
 	}
 
 	drawCandles(){
@@ -403,7 +407,8 @@ class Game extends Phaser.Scene {
                     this.input.once('pointerdown', this.invokeTime, this);
                 }
             });
-
+            
+            //this.add.image(256, 256, 'gly-01');
             /* this.pieces.each(piece => {
                 piece.setPostPipeline('ShinePostFX');
             }); */
@@ -422,17 +427,29 @@ class Game extends Phaser.Scene {
         let iterations;
         let nextPhoto;
 
-        if (this.photo === 'grid-test'){
-            nextPhoto = 'grid-test2';
-            iterations = 3;
+        if (this.photo === 'gly-01'){
+            nextPhoto = 'gly-02';
+            iterations = 4;
             size = 4;
-        } else if (this.photo === 'grid-test2'){
-            nextPhoto = 'grid-test3';
-            iterations = 3;
+        } else if (this.photo === 'gly-02'){
+            nextPhoto = 'gly-03';
+            iterations = 11;
+            size = 4;
+        } else if (this.photo === 'gly-03') {
+            nextPhoto = 'gly-04';
+            iterations = 18;
+            size = 4;
+        } else if (this.photo === 'gly-04') {
+            nextPhoto = 'gly-05';
+            iterations = 26;
+            size = 4;
+        } else if (this.photo === 'gly-05') {
+            nextPhoto = 'gridtest';
+            iterations = 35;
             size = 4;
         } else {
-            nextPhoto = 'grid-test';
-            iterations = 10;
+            nextPhoto = 'gly-01';
+            iterations = 15;
             size = 4;
         }
 
@@ -469,7 +486,7 @@ class Game extends Phaser.Scene {
         
         setTimeout(() => {
             this.nextRound();
-        }, 5500);
+        }, 5050);
         //this.scene.start('invoke');
     }
 
