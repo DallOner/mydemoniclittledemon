@@ -31,24 +31,24 @@ class Game extends Phaser.Scene {
 
 	init(){
 		this.candle1_state = false;
-        this.candle1_on = this.add.sprite(430, 100, 'candle-on');
-        this.candle1_off = this.add.sprite(430, 100, 'candle-off');
+        this.candle1_on = this.add.image(430, 100, 'candle-on');
+        this.candle1_off = this.add.image(430, 100, 'candle-off');
 
         this.candle2_state = false;
-        this.candle2_on = this.add.sprite(844, 92, 'candle-on');
-        this.candle2_off = this.add.sprite(844, 92, 'candle-off');
+        this.candle2_on = this.add.image(844, 92, 'candle-on');
+        this.candle2_off = this.add.image(844, 92, 'candle-off');
 
 		this.candle3_state = false;
-        this.candle3_on = this.add.sprite(364, 412, 'candle-on');
-        this.candle3_off = this.add.sprite(364, 412, 'candle-off');
+        this.candle3_on = this.add.image(364, 412, 'candle-on');
+        this.candle3_off = this.add.image(364, 412, 'candle-off');
 
         this.candle4_state = false;
-        this.candle4_on = this.add.sprite(932, 386, 'candle-on');
-        this.candle4_off = this.add.sprite(932, 386, 'candle-off');
+        this.candle4_on = this.add.image(932, 386, 'candle-on');
+        this.candle4_off = this.add.image(932, 386, 'candle-off');
 
 		this.candle5_state = false;
-        this.candle5_on = this.add.sprite(628, 586, 'candle-on');
-        this.candle5_off = this.add.sprite(628, 586, 'candle-off');
+        this.candle5_on = this.add.image(628, 586, 'candle-on');
+        this.candle5_off = this.add.image(628, 586, 'candle-off');
 	}
 
 	create(){
@@ -71,6 +71,9 @@ class Game extends Phaser.Scene {
 
 		let bgCircle = this.add.image(0,0, 'bg-circle');
 		bgCircle.setOrigin(0,0);
+
+        const rm_shadow = this.add.image(0, 0, 'bg-shadow');
+        rm_shadow.setOrigin(0);
 
 		//let bgBoard = this.add.image(0,0, 'bg-board');
 		//bgBoard.setOrigin(0,0);
