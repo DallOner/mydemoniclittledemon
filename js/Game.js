@@ -31,10 +31,24 @@ class Game extends Phaser.Scene {
 
 	init(){
 		this.candle1_state = false;
-		this.candle2_state = false;
+        this.candle1_on = this.add.sprite(430, 100, 'candle-on');
+        this.candle1_off = this.add.sprite(430, 100, 'candle-off');
+
+        this.candle2_state = false;
+        this.candle2_on = this.add.sprite(844, 92, 'candle-on');
+        this.candle2_off = this.add.sprite(844, 92, 'candle-off');
+
 		this.candle3_state = false;
-		this.candle4_state = false;
+        this.candle3_on = this.add.sprite(364, 412, 'candle-on');
+        this.candle3_off = this.add.sprite(364, 412, 'candle-off');
+
+        this.candle4_state = false;
+        this.candle4_on = this.add.sprite(932, 386, 'candle-on');
+        this.candle4_off = this.add.sprite(932, 386, 'candle-off');
+
 		this.candle5_state = false;
+        this.candle5_on = this.add.sprite(628, 586, 'candle-on');
+        this.candle5_off = this.add.sprite(628, 586, 'candle-off');
 	}
 
 	create(){
@@ -64,49 +78,58 @@ class Game extends Phaser.Scene {
 
 	drawCandles(){
 		if (this.candle1_state == true){
-			let candle1 = this.add.sprite(430, 100, 'candle-on');
-			candle1.setDepth(1);
-			//this.candle1_state = false;
-		} else {
-			let candle1 = this.add.sprite(430, 100, 'candle-off');
-			candle1.setDepth(1);
-			//this.candle1_state = true;
+			this.candle1_off.setAlpha(0);
+            this.candle1_on.setAlpha(1);
+			this.candle1_on.setDepth(1);
+		} else if (this.candle1_state == false){
+			this.candle1_on.setAlpha(0);
+            this.candle1_off.setAlpha(1);
+            this.candle1_off.setDepth(1);
 		}
 
 		if (this.candle2_state == true){
-			let candle2 = this.add.sprite(844, 92, 'candle-on');
-			candle2.setDepth(1);
-		} else {
-			let candle2 = this.add.sprite(844, 92, 'candle-off');
-			candle2.setDepth(1);
+			this.candle2_off.setAlpha(0);
+            this.candle2_on.setAlpha(1);
+			this.candle2_on.setDepth(1);
+		} else if (this.candle2_state == false){
+			this.candle2_on.setAlpha(0);
+            this.candle2_off.setAlpha(1);
+            this.candle2_off.setDepth(1);
 		}
 
-		if (this.candle3_state == true){
-			let candle3 = this.add.sprite(364, 412, 'candle-on');
-			candle3.setDepth(1);
-		} else {
-			let candle3 = this.add.sprite(364, 412, 'candle-off');
-			candle3.setDepth(1);
+        if (this.candle3_state == true){
+			this.candle3_off.setAlpha(0);
+            this.candle3_on.setAlpha(1);
+			this.candle3_on.setDepth(1);
+		} else if (this.candle3_state == false){
+            this.candle3_on.setAlpha(0);
+            this.candle3_off.setAlpha(1);
+			this.candle3_off.setDepth(1);
 		}
 
-		if (this.candle4_state == true){
-			let candle4 = this.add.sprite(932, 386, 'candle-on');
-			candle4.setDepth(1);
-		} else {
-			let candle4 = this.add.sprite(932, 386, 'candle-off');
-			candle4.setDepth(1);
+        if (this.candle4_state == true){
+			this.candle4_off.setAlpha(0);
+            this.candle4_on.setAlpha(1);
+			this.candle4_on.setDepth(1);
+		} else if (this.candle4_state == false){
+            this.candle4_on.setAlpha(0);
+            this.candle4_off.setAlpha(1);
+			this.candle4_off.setDepth(1);
 		}
 
-		if (this.candle5_state == true){
-			let candle5 = this.add.sprite(628, 586, 'candle-on');
-			candle5.setDepth(1);
-		} else {
-			let candle5 = this.add.sprite(628, 586, 'candle-off');
-			candle5.setDepth(1);
+        if (this.candle5_state == true){
+			this.candle5_off.setAlpha(0);
+            this.candle5_on.setAlpha(1);
+			this.candle5_on.setDepth(1);
+		} else if (this.candle5_state == false){
+            this.candle5_on.setAlpha(0);
+            this.candle5_off.setAlpha(1);
+			this.candle5_off.setDepth(1);
 		}
 	}
 
 	startPuzzle (key, rows, columns){
+
         this.photo = key;
         this.rows = rows;
         this.columns = columns;
@@ -384,6 +407,19 @@ class Game extends Phaser.Scene {
     }
 
 	nextRound (){
+        this.candle1_state = false;
+        this.candle2_state = false;
+        this.candle3_state = false;
+        this.candle4_state = false;
+        this.candle5_state = false;
+
+        console.log("c1 " + this.candle1_state);
+        console.log("c2 " + this.candle2_state);
+        console.log("c3 " + this.candle3_state);
+        console.log("c4 " + this.candle4_state);
+        console.log("c5 " + this.candle5_state);
+        this.drawCandles();
+
         let size;
         let iterations;
         let nextPhoto;
@@ -430,6 +466,5 @@ class Game extends Phaser.Scene {
     }
 
 	update(){
-
 	}
 }
