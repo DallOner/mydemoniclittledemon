@@ -12,7 +12,7 @@ class Invoke extends Phaser.Scene {
     create(){
         console.log('The Chosen Demon is: ' + this.demonChosen);
 
-        const room = this.add.image(0, 0, 'bg-room');
+        const room = this.add.image(0, 0, 'bg-gameplay');
         room.setOrigin(0);
 
         const rm_shadow = this.add.image(0, 0, 'bg-shadow');

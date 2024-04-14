@@ -15,7 +15,7 @@ class Game extends Phaser.Scene {
         this.spacer = null;
         this.slideSpeed = 300;
         this.slideEase = 'power3';
-        this.iterations = 3;
+        this.iterations = 2;
 
         //  The speed at which the pieces are shuffled at the start. This allows
         //  the player to see the puzzle before trying to solve it. However if
@@ -424,16 +424,16 @@ class Game extends Phaser.Scene {
 
         if (this.photo === 'grid-test'){
             nextPhoto = 'grid-test2';
-            iterations = 20;
+            iterations = 3;
             size = 4;
         } else if (this.photo === 'grid-test2'){
             nextPhoto = 'grid-test3';
-            iterations = 30;
-            size = 5;
+            iterations = 3;
+            size = 4;
         } else {
             nextPhoto = 'grid-test';
             iterations = 10;
-            size = 3;
+            size = 4;
         }
 
 		this.photo = nextPhoto;
@@ -465,6 +465,7 @@ class Game extends Phaser.Scene {
 
     invokeTime(){
         this.scene.launch('invoke');
+        this.scene.bringToTop('invoke');
         
         setTimeout(() => {
             this.nextRound();

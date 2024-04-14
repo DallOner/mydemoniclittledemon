@@ -26,8 +26,6 @@ class Load extends Phaser.Scene {
 		this.load.image('cross', 'asset/img/T_MDLD_Cross.png');
 		this.load.image('curtain', 'asset/img/T_MDLD_Curtain.png');
 		this.load.image('lamp', 'asset/img/T_MDLD_Lamp.png');
-		
-
 
 		this.load.image('grid-test', 'asset/img/mdld_grid-test.png');
 		this.load.image('grid-test2', 'asset/img/mdld_grid-test2.png');
