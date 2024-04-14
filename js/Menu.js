@@ -8,13 +8,17 @@ class Menu extends Phaser.Scene {
 		let gMenu = this.add.image(0, 0, 'bg-menu');
 		gMenu.setOrigin(0, 0);
 
+		// Play Background music
+		const music = this.sound.add('song');
+		music.play();
+
 		// Play Button in the Main Menu
 		const playButton = this.add.sprite(240, 296, 'btn-play').setInteractive();
 		playButton.on('pointerdown', function (pointer){
             //this.setTint(0xd1d1d1);
 			this.scene.start('game');
         }, this);
-		
+
 		playButton.on('pointerout', function (pointer){
             this.clearTint();
         });
