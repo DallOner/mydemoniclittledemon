@@ -396,7 +396,8 @@ class Game extends Phaser.Scene {
                 duration: this.slideSpeed * 2,
                 ease: 'linear',
                 onComplete: () => {
-                    this.input.once('pointerdown', this.nextRound, this);
+                    //this.input.once('pointerdown', this.nextRound, this);
+                    this.input.once('pointerdown', this.invokeTime, this);
                 }
             });
 
@@ -412,12 +413,6 @@ class Game extends Phaser.Scene {
         this.candle3_state = false;
         this.candle4_state = false;
         this.candle5_state = false;
-
-        console.log("c1 " + this.candle1_state);
-        console.log("c2 " + this.candle2_state);
-        console.log("c3 " + this.candle3_state);
-        console.log("c4 " + this.candle4_state);
-        console.log("c5 " + this.candle5_state);
         this.drawCandles();
 
         let size;
@@ -463,6 +458,14 @@ class Game extends Phaser.Scene {
 
             }
         }); */
+    }
+
+    invokeTime(){
+        this.scene.launch('invoke');
+        setInterval(() => {
+            this.nextRound();
+        }, 5500);
+        //this.scene.start('invoke');
     }
 
 	update(){
