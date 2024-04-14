@@ -21,7 +21,7 @@ class Load extends Phaser.Scene {
 		this.load.image('portrait-1', 'asset/img/T_MDLD_Portrait_01.png');
 		this.load.image('portrait-2', 'asset/img/T_MDLD_Portrait_02.png');
 		this.load.image('portrait-1', 'asset/img/T_MDLD_Portrait_01.png');
-		this.load.image('bg-gameplay', 'asset/img/T_MDLD_Bg_Gameplay.png');
+		this.load.image('bg-gameplay', 'asset/img/T_MDLD_Bg_Gameplay_withCandles.png');
 		this.load.image('cat', 'asset/img/T_MDLD_Cat.png');
 		this.load.image('cross', 'asset/img/T_MDLD_Cross.png');
 		this.load.image('curtain', 'asset/img/T_MDLD_Curtain.png');
