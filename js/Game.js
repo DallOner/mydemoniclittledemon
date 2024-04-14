@@ -30,17 +30,18 @@ class Game extends Phaser.Scene {
 	}
 
 	init(){
-		let candle1_state = false;
-		let candle2_state = false;
-		let candle3_state = false;
-		let candle4_state = false;
-		let candle5_state = false;
+		this.candle1_state = false;
+		this.candle2_state = false;
+		this.candle3_state = false;
+		this.candle4_state = false;
+		this.candle5_state = false;
 	}
 
 	create(){
 		console.log('Game started');
 
 		this.drawGrid();
+		this.drawCandles();
 
 		window.solve = () => {
             this.nextRound();
@@ -64,34 +65,44 @@ class Game extends Phaser.Scene {
 	drawCandles(){
 		if (this.candle1_state == true){
 			let candle1 = this.add.sprite(430, 100, 'candle-on');
+			candle1.setDepth(1);
 			//this.candle1_state = false;
 		} else {
 			let candle1 = this.add.sprite(430, 100, 'candle-off');
+			candle1.setDepth(1);
 			//this.candle1_state = true;
 		}
 
 		if (this.candle2_state == true){
 			let candle2 = this.add.sprite(844, 92, 'candle-on');
+			candle2.setDepth(1);
 		} else {
 			let candle2 = this.add.sprite(844, 92, 'candle-off');
+			candle2.setDepth(1);
 		}
 
 		if (this.candle3_state == true){
 			let candle3 = this.add.sprite(364, 412, 'candle-on');
+			candle3.setDepth(1);
 		} else {
 			let candle3 = this.add.sprite(364, 412, 'candle-off');
+			candle3.setDepth(1);
 		}
 
 		if (this.candle4_state == true){
 			let candle4 = this.add.sprite(932, 386, 'candle-on');
+			candle4.setDepth(1);
 		} else {
 			let candle4 = this.add.sprite(932, 386, 'candle-off');
+			candle4.setDepth(1);
 		}
 
 		if (this.candle5_state == true){
-			let candle5 = this.add.sprite(0,0, 'candle-on');
+			let candle5 = this.add.sprite(628, 586, 'candle-on');
+			candle5.setDepth(1);
 		} else {
 			let candle5 = this.add.sprite(628, 586, 'candle-off');
+			candle5.setDepth(1);
 		}
 	}
 
@@ -349,6 +360,12 @@ class Game extends Phaser.Scene {
             this.action = demonicPuzzle.ALLOW_CLICK;
         } else {
             //this.sound.play('win');
+			this.candle1_state = true;
+			this.candle2_state = true;
+			this.candle3_state = true;
+			this.candle4_state = true;
+			this.candle5_state = true;
+			this.drawCandles();
 
             this.tweens.add({
                 targets: this.spacer,
@@ -413,6 +430,6 @@ class Game extends Phaser.Scene {
     }
 
 	update(){
-		this.drawCandles();
+
 	}
 }
