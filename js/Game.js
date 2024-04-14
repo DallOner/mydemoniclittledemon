@@ -462,7 +462,8 @@ class Game extends Phaser.Scene {
 
     invokeTime(){
         this.scene.launch('invoke');
-        setInterval(() => {
+        
+        setTimeout(() => {
             this.nextRound();
         }, 5500);
         //this.scene.start('invoke');

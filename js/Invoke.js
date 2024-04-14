@@ -15,7 +15,7 @@ class Invoke extends Phaser.Scene {
         const room = this.add.image(0, 0, 'bg-room');
         room.setOrigin(0);
         //Shows the animation...
-        setInterval(() => {
+        setTimeout(() => {
             this.scene.bringToTop('game');
         }, 5000);
     }
