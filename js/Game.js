@@ -49,6 +49,8 @@ class Game extends Phaser.Scene {
 		this.candle5_state = false;
         this.candle5_on = this.add.image(628, 586, 'candle-on');
         this.candle5_off = this.add.image(628, 586, 'candle-off');
+        
+        this.glyph_preview = '';
 	}
 
 	create(){
@@ -201,6 +203,42 @@ class Game extends Phaser.Scene {
         this.spacer.alpha = 0;
 
         this.lastMove = null;
+
+        // Drawing the Seal/Glyph preview...
+        switch(this.photo) {
+            case 'gly-01':
+                this.glyph_preview = this.add.image(1020, 436, 'gly-01');
+                this.glyph_preview.setOrigin(0);
+                this.glyph_preview.setScale(0.35);
+                break;
+
+            case 'gly-02':
+                this.glyph_preview = this.add.image(1020, 436, 'gly-02');
+                this.glyph_preview.setOrigin(0);
+                this.glyph_preview.setScale(0.35);
+                break;
+
+            case 'gly-03':
+                this.glyph_preview = this.add.image(1020, 436, 'gly-03');
+                this.glyph_preview.setOrigin(0);
+                this.glyph_preview.setScale(0.35);
+                break;
+
+            case 'gly-04':
+                this.glyph_preview = this.add.image(1020, 436, 'gly-04');
+                this.glyph_preview.setOrigin(0);
+                this.glyph_preview.setScale(0.35);
+                break;
+            
+            case 'gly-05':
+                this.glyph_preview = this.add.image(1020, 436, 'gly-05');
+                this.glyph_preview.setOrigin(0);
+                this.glyph_preview.setScale(0.35);
+                break;
+
+            default:
+                break;
+        }
 
         this.shufflePieces();
     }
