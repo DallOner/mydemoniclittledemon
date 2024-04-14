@@ -17,10 +17,14 @@ class Load extends Phaser.Scene {
 		this.load.image('candle-on', 'asset/img/T_MDLD_Candle_on.png');
 		this.load.image('bg-floor', 'asset/img/T_MDLD_Bg_Floor.png');
 		this.load.image('bg-circle', 'asset/img/T_MDLD_Circle.png');
+
+		this.load.image('grid-test', 'asset/img/mdld_grid-test.png');
+		this.load.image('grid-test2', 'asset/img/mdld_grid-test2.png');
+		this.load.image('grid-test3', 'asset/img/mdld_grid-test3.png');
 		
 		// Load Spritesheets
 		this.load.spritesheet('glyph_test', 'asset/img/ss_glyphs_test.png', {frameWidth: 96, frameHeight: 128});
-		this.load.spritesheet('grid-test', 'asset/img/mdld_grid-test.png', {frameWidth: 128, frameHeight: 128});
+		
 	
 		// Load Audio
 		this.load.audio('song', 'asset/audio/Eternal_Procession.mp3');
