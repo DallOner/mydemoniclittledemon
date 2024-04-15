@@ -205,35 +205,57 @@ class Game extends Phaser.Scene {
         this.lastMove = null;
 
         // Drawing the Seal/Glyph preview...
+        // Anotar esto en una funcion propia que sea llamada desde create()
+        // para que se pueda establecer un funcionamiento adecuado del preview.
         switch(this.photo) {
             case 'gly-01':
                 this.glyph_preview = this.add.image(1020, 436, 'gly-01');
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
+                this.glyph_preview.setAlpha(1);
+                setTimeout(() => {
+                    this.glyph_preview.setAlpha(0);
+                }, 15000);
                 break;
 
             case 'gly-02':
                 this.glyph_preview = this.add.image(1020, 436, 'gly-02');
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
+                this.glyph_preview.setAlpha(1);
+                setTimeout(() => {
+                    this.glyph_preview.setAlpha(0);
+                }, 15000);
                 break;
 
             case 'gly-03':
                 this.glyph_preview = this.add.image(1020, 436, 'gly-03');
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
+                this.glyph_preview.setAlpha(1);
+                setTimeout(() => {
+                    this.glyph_preview.setAlpha(0);
+                }, 15000);
                 break;
 
             case 'gly-04':
                 this.glyph_preview = this.add.image(1020, 436, 'gly-04');
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
+                this.glyph_preview.setAlpha(1);
+                setTimeout(() => {
+                    this.glyph_preview.setAlpha(0);
+                }, 15000);
                 break;
             
             case 'gly-05':
                 this.glyph_preview = this.add.image(1020, 436, 'gly-05');
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
+                this.glyph_preview.setAlpha(1);
+                setTimeout(() => {
+                    this.glyph_preview.setAlpha(0);
+                }, 15000);
                 break;
 
             default:
