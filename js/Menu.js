@@ -26,6 +26,12 @@ class Menu extends Phaser.Scene {
         playButton.on('pointerup', function (pointer){
             this.clearTint();
         });
+
+		const creditsButton = this.add.sprite(240, 465, 'btn-credits').setInteractive();
+		creditsButton.on('pointerdown', function (pointer){
+            //this.setTint(0xd1d1d1);
+			this.scene.start('game');
+        }, this);
 	}
 
 

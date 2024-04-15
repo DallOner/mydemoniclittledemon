@@ -10,8 +10,9 @@ class Load extends Phaser.Scene {
 		this.load.image('phaser-logo', 'asset/img/boilerplate-logo.png');
 		this.load.image('bg-skyblue', 'asset/img/bg_skyblue.png');
 		this.load.image('bg-room', 'asset/img/MyDemonicLittleDemons_Gameplay.png');
-		this.load.image('bg-menu', 'asset/img/MyDemonicLittleDemons_Menu.png');
-		this.load.image('btn-play', 'asset/img/mdld_Menu_btn-play.png');
+		this.load.image('bg-menu', 'asset/img/MyDemonicLittleDemons_Menu_background.png');
+		this.load.image('btn-play', 'asset/img/btn-play.png');
+		this.load.image('btn-credits', 'asset/img/btn-credits.png');
 		this.load.image('bg-board', 'asset/img/MyDemonicLittleDemons_Board.png');
 		this.load.image('bg-gameplay-grid', 'asset/img/T_MDLD_Gameplay_Grid.png');
 		this.load.image('candle-off', 'asset/img/T_MDLD_Candle_off.png');
@@ -36,7 +37,7 @@ class Load extends Phaser.Scene {
 		this.load.image('gly-04', 'asset/img/T_MDLD_Graph_04_S.png');
 		this.load.image('gly-05', 'asset/img/T_MDLD_Graph_05_S.png');
 
-		this.load.image('grid-test', 'asset/img/mdld_grid-test.png');
+		this.load.image('grid-test', 'asset/img/Test.png');
 		this.load.image('grid-test2', 'asset/img/mdld_grid-test2.png');
 		this.load.image('grid-test3', 'asset/img/mdld_grid-test3.png');
 		
