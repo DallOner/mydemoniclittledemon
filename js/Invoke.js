@@ -36,6 +36,8 @@ class Invoke extends Phaser.Scene {
         const table = this.add.image(224, 320, 'table');
         table.setOrigin(0);
 
+        this.summonDemons();
+
         //const rm_shadow = this.add.image(0, 0, 'bg-shadow');
         //rm_shadow.setOrigin(0);
 
@@ -44,4 +46,23 @@ class Invoke extends Phaser.Scene {
             this.scene.bringToTop('game');
         }, 5000);
     }
+
+    summonDemons(){
+        this.anims.create({
+            key: 'boom',
+            frames: this.anims.generateFrameNumbers('boom', { frames: [ 0, 1, 2, 3, 4 ] }),
+            frameRate: 8,
+            repeat: 0
+        });
+
+        const boom = this.add.sprite(640, 360);
+        //boom.setOrigin(0);
+        boom.play('boom');
+
+        setTimeout(() => {
+            this.add.image(0, 0, 'bg-shadow');
+            boom.setAlpha(0);
+        }, 600);
+    }
+
 }

@@ -15,7 +15,7 @@ class Game extends Phaser.Scene {
         this.spacer = null;
         this.slideSpeed = 300;
         this.slideEase = 'power3';
-        this.iterations = 10;
+        this.iterations = 2;
 
         //  The speed at which the pieces are shuffled at the start. This allows
         //  the player to see the puzzle before trying to solve it. However if
@@ -472,7 +472,7 @@ class Game extends Phaser.Scene {
 
         if (this.photo === 'gly-01'){
             nextPhoto = 'gly-02';
-            iterations = 16;
+            iterations = 2;
             size = 4;
         } else if (this.photo === 'gly-02'){
             nextPhoto = 'gly-03';

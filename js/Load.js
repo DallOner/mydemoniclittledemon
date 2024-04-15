@@ -44,6 +44,7 @@ class Load extends Phaser.Scene {
 		
 		// Load Spritesheets
 		this.load.spritesheet('glyph_test', 'asset/img/ss_glyphs_test.png', {frameWidth: 96, frameHeight: 128});
+		this.load.spritesheet('boom', 'asset/img/boom-spritesheet.png', {frameWidth: 640, frameHeight: 368});
 		
 	
 		// Load Audio
