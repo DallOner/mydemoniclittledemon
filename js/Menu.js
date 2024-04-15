@@ -32,6 +32,10 @@ class Menu extends Phaser.Scene {
             //this.setTint(0xd1d1d1);
 			this.scene.start('game');
         }, this);
+
+		const menu_shadow = this.add.image(0, 0, 'bg-menuShadow');
+		menu_shadow.setOrigin(0, 0);
+		menu_shadow.setAlpha(.4);
 	}
 
 
