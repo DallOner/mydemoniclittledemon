@@ -211,9 +211,6 @@ class Game extends Phaser.Scene {
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
                 this.glyph_preview.setAlpha(1);
-                setTimeout(() => {
-                    this.glyph_preview.setAlpha(0);
-                }, 15000);
                 break;
 
             case 'gly-02':
@@ -221,9 +218,6 @@ class Game extends Phaser.Scene {
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
                 this.glyph_preview.setAlpha(1);
-                setTimeout(() => {
-                    this.glyph_preview.setAlpha(0);
-                }, 15000);
                 break;
 
             case 'gly-03':
@@ -231,9 +225,6 @@ class Game extends Phaser.Scene {
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
                 this.glyph_preview.setAlpha(1);
-                setTimeout(() => {
-                    this.glyph_preview.setAlpha(0);
-                }, 15000);
                 break;
 
             case 'gly-04':
@@ -241,9 +232,6 @@ class Game extends Phaser.Scene {
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
                 this.glyph_preview.setAlpha(1);
-                setTimeout(() => {
-                    this.glyph_preview.setAlpha(0);
-                }, 15000);
                 break;
             
             case 'gly-05':
@@ -251,9 +239,6 @@ class Game extends Phaser.Scene {
                 this.glyph_preview.setOrigin(0);
                 this.glyph_preview.setScale(0.35);
                 this.glyph_preview.setAlpha(1);
-                setTimeout(() => {
-                    this.glyph_preview.setAlpha(0);
-                }, 15000);
                 break;
 
             default:
@@ -539,6 +524,7 @@ class Game extends Phaser.Scene {
     }
 
     invokeTime(){
+        this.glyph_preview.setAlpha(0);
         this.scene.launch('invoke');
         this.scene.bringToTop('invoke');
         
