@@ -61,7 +61,6 @@ class Invoke extends Phaser.Scene {
 
         setTimeout(() => {
             const demon = this.add.image(640, 400, 'red-cthulhu');
-            //demon.setOrigin(0);
 
             boom.setAlpha(0);
         }, 600);
