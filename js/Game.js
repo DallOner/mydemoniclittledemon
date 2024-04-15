@@ -74,9 +74,9 @@ class Game extends Phaser.Scene {
         //let bgBoard = this.add.image(0,0, 'bg-board');
 		//bgBoard.setOrigin(0,0);
 
-        let bgGrid = this.add.image(0,0, 'bg-gameplay-grid');
-        bgGrid.setOrigin(0);
-        bgGrid.setAlpha(.4);
+        //let bgGrid = this.add.image(0,0, 'bg-gameplay-grid');
+        //bgGrid.setOrigin(0);
+        //bgGrid.setAlpha(.4);
 
 		let bgCircle = this.add.image(0,0, 'bg-circle');
 		bgCircle.setOrigin(0,0);
