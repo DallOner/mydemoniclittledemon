@@ -15,13 +15,13 @@ class Game extends Phaser.Scene {
         this.spacer = null;
         this.slideSpeed = 300;
         this.slideEase = 'power3';
-        this.iterations = 2;
+        this.iterations = 10;
 
         //  The speed at which the pieces are shuffled at the start. This allows
         //  the player to see the puzzle before trying to solve it. However if
         //  you don't want this, just set the speed to zero and it'll appear
         //  instantly 'scrambled'.
-        this.shuffleSpeed = 500;
+        this.shuffleSpeed = 150;
         this.shuffleEase = 'power1';
         this.lastMove = null;
         this.photo = '';
@@ -472,23 +472,23 @@ class Game extends Phaser.Scene {
 
         if (this.photo === 'gly-01'){
             nextPhoto = 'gly-02';
-            iterations = 4;
+            iterations = 16;
             size = 4;
         } else if (this.photo === 'gly-02'){
             nextPhoto = 'gly-03';
-            iterations = 11;
+            iterations = 22;
             size = 4;
         } else if (this.photo === 'gly-03') {
             nextPhoto = 'gly-04';
-            iterations = 18;
+            iterations = 28;
             size = 4;
         } else if (this.photo === 'gly-04') {
             nextPhoto = 'gly-05';
-            iterations = 26;
+            iterations = 30;
             size = 4;
         } else if (this.photo === 'gly-05') {
             nextPhoto = 'gridtest';
-            iterations = 35;
+            iterations = 40;
             size = 4;
         } else {
             nextPhoto = 'gly-01';
