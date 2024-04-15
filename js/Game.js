@@ -202,9 +202,7 @@ class Game extends Phaser.Scene {
         this.spacer = this.pieces.getAt(this.pieces.length - 1);
         this.spacer.alpha = 0;
 
-        this.lastMove = null;
-
-        // Drawing the Seal/Glyph preview...
+        this.lastMove = null;// Drawing the Seal/Glyph preview...
         // Anotar esto en una funcion propia que sea llamada desde create()
         // para que se pueda establecer un funcionamiento adecuado del preview.
         switch(this.photo) {
