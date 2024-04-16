@@ -32,6 +32,10 @@ class Load extends Phaser.Scene {
 		this.load.image('table', 'asset/img/T_MDLD_Table.png');
 
 		this.load.image('red-cthulhu', 'asset/img/T_MDLD_Monster_01.png');
+		this.load.image('cthulhu2', 'asset/img/T_MDLD_Monster_02.png');
+		this.load.image('cthulhu3', 'asset/img/T_MDLD_Monster_03.png');
+		this.load.image('cthulhu4', 'asset/img/T_MDLD_Monster_04.png');
+		this.load.image('cthulhu5', 'asset/img/T_MDLD_Monster_05.png');
 
 		this.load.image('gly-test', 'asset/img/gly_test.png');
 		this.load.image('gly-01', 'asset/img/T_MDLD_Graph_01_S.png');
