@@ -56,6 +56,8 @@ class Game extends Phaser.Scene {
 	create(){
 		console.log('Game started');
 
+        //this.audioMove = this.sound.add('sfx-move');
+
 		this.drawGrid();
 		this.drawCandles();
 
@@ -408,7 +410,7 @@ class Game extends Phaser.Scene {
 	slidePiece (piece, x, y){
         this.action = demonicPuzzle.TWEENING;
 
-        //this.sound.play('move');
+        this.sound.play('sfx-move');
 
         this.tweens.add({
             targets: piece,
@@ -432,7 +434,7 @@ class Game extends Phaser.Scene {
         if (outOfSequence){
             this.action = demonicPuzzle.ALLOW_CLICK;
         } else {
-            //this.sound.play('win');
+            this.sound.play('sfx-victory');
 			this.candle1_state = true;
 			this.candle2_state = true;
 			this.candle3_state = true;

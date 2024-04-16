@@ -12,6 +12,9 @@ class Invoke extends Phaser.Scene {
     create(){
         console.log('The Chosen Demon is: ' + this.demonChosen);
 
+        this.audioInvoke = this.sound.add('sfx-invoke');
+        this.audioInvoke.play();
+
         const room = this.add.image(0, 0, 'bg-gameplay');
         room.setOrigin(0);
 
@@ -54,6 +57,8 @@ class Invoke extends Phaser.Scene {
             frameRate: 8,
             repeat: 0
         });
+
+        this.sound.play('sfx-invoke');
 
         const boom = this.add.sprite(640, 360);
         //boom.setOrigin(0);

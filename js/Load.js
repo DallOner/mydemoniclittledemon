@@ -51,6 +51,9 @@ class Load extends Phaser.Scene {
 	
 		// Load Audio
 		this.load.audio('song', 'asset/audio/Eternal_Procession.mp3');
+		this.load.audio('sfx-move', 'asset/audio/puzzle-move.wav');
+		this.load.audio('sfx-victory', 'asset/audio/Victory.wav');
+		this.load.audio('sfx-invoke', 'asset/audio/SpookyAmbience.wav');
 	}
 
 	create(){
