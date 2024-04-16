@@ -16,8 +16,8 @@ class Load extends Phaser.Scene {
 		this.load.image('bg-menuShadow', 'asset/img/mdld_Menu_shadow.png');
 		this.load.image('bg-board', 'asset/img/MyDemonicLittleDemons_Board.png');
 		this.load.image('bg-gameplay-grid', 'asset/img/T_MDLD_Gameplay_Grid.png');
-		this.load.image('candle-off', 'asset/img/T_MDLD_Candle_off.png');
-		this.load.image('candle-on', 'asset/img/T_MDLD_Candle_on.png');
+		this.load.image('candle-off', 'asset/img/T_MDLD_Candle_Off.png');
+		this.load.image('candle-on', 'asset/img/T_MDLD_Candle_On.png');
 		this.load.image('bg-floor', 'asset/img/T_MDLD_Bg_Floor.png');
 		this.load.image('bg-circle', 'asset/img/T_MDLD_Circle.png');
 		this.load.image('bg-shadow', 'asset/img/T_MDLD_elements_justshadow.png');
