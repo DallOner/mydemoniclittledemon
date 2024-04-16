@@ -27,11 +27,13 @@ class Menu extends Phaser.Scene {
             this.clearTint();
         });
 
-		const creditsButton = this.add.sprite(240, 465, 'btn-credits').setInteractive();
+		this.add.text(160, 655, 'Made with ❤️ ');
+		this.add.text(128, 680, 'by Klove & DallOner');
+		/* const creditsButton = this.add.sprite(240, 465, 'btn-credits').setInteractive();
 		creditsButton.on('pointerdown', function (pointer){
             //this.setTint(0xd1d1d1);
-			this.scene.start('game');
-        }, this);
+			this.scene.start('credits');
+        }, this); */
 
 		const menu_shadow = this.add.image(0, 0, 'bg-menuShadow');
 		menu_shadow.setOrigin(0, 0);
