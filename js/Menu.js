@@ -10,6 +10,7 @@ class Menu extends Phaser.Scene {
 
 		// Play Background music
 		const music = this.sound.add('song');
+		music.setLoop(true);
 		music.play();
 
 		// Play Button in the Main Menu
