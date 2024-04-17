@@ -61,11 +61,32 @@ class Invoke extends Phaser.Scene {
         this.sound.play('sfx-invoke');
 
         const boom = this.add.sprite(640, 360);
-        //boom.setOrigin(0);
         boom.play('boom');
 
         setTimeout(() => {
-            const demon = this.add.image(640, 400, 'red-cthulhu');
+            switch (this.demonChosen){
+                
+                case 1:
+                    this.add.image(640, 400, 'red-cthulhu');
+                    break;
+                
+                case 2:
+                    this.add.image(640, 400, 'cthulhu2');
+                    break;
+
+                case 3:
+                    this.add.image(640, 400, 'cthulhu3');
+                    break;
+                
+                case 4:
+                    this.add.image(640, 400, 'cthulhu4');
+                    break;
+
+                case 5:
+                    this.add.image(640, 400, 'cthulhu5');
+                    break;
+            }
+            //const demon = this.add.image(640, 400, 'red-cthulhu');
 
             boom.setAlpha(0);
         }, 600);

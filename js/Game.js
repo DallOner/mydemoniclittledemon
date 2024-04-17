@@ -474,27 +474,27 @@ class Game extends Phaser.Scene {
 
         if (this.photo === 'gly-01'){
             nextPhoto = 'gly-02';
-            iterations = 16;
+            iterations = 15;
             size = 4;
         } else if (this.photo === 'gly-02'){
             nextPhoto = 'gly-03';
-            iterations = 22;
+            iterations = 18;
             size = 4;
         } else if (this.photo === 'gly-03') {
             nextPhoto = 'gly-04';
-            iterations = 28;
+            iterations = 20;
             size = 4;
         } else if (this.photo === 'gly-04') {
             nextPhoto = 'gly-05';
-            iterations = 30;
+            iterations = 25;
             size = 4;
         } else if (this.photo === 'gly-05') {
             nextPhoto = 'gridtest';
-            iterations = 40;
+            iterations = 30;
             size = 4;
         } else {
             nextPhoto = 'gly-01';
-            iterations = 15;
+            iterations = 22;
             size = 4;
         }
 
