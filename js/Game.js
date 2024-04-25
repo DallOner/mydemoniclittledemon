@@ -3,6 +3,19 @@ const demonicPuzzle = {
 	TWEENING: 1
 };
 
+/*
+    Crear un sistema de seleccion despues de cada completacion de puzzle que
+    permita al jugador elegir entre los objetos que se mostraran en la habitacion
+    cada objeto cuenta con habilidad para facilitar el puzzle. 
+    - Numero de Iteraciones
+    - Velociodad de Swap entre fichas
+    - Dios/demonio mas grande (en escala)
+    Esto se puede hacer directamente con las variables ya existentes con modificadores.
+    Adicional a esto, se debe incrementar el numero de niveles reutilizando los seals.
+    
+    Crear un Thanks for Playing al final del Run.
+*/
+
 class Game extends Phaser.Scene {
 	constructor(){
 		super('game');
