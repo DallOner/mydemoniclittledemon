@@ -30,10 +30,6 @@ class Game extends Phaser.Scene {
         this.slideEase = 'power3';
         this.iterations = 10;
 
-        //  The speed at which the pieces are shuffled at the start. This allows
-        //  the player to see the puzzle before trying to solve it. However if
-        //  you don't want this, just set the speed to zero and it'll appear
-        //  instantly 'scrambled'.
         this.shuffleSpeed = 150;
         this.shuffleEase = 'power1';
         this.lastMove = null;
@@ -217,9 +213,8 @@ class Game extends Phaser.Scene {
         this.spacer = this.pieces.getAt(this.pieces.length - 1);
         this.spacer.alpha = 0;
 
-        this.lastMove = null;// Drawing the Seal/Glyph preview...
-        // Anotar esto en una funcion propia que sea llamada desde create()
-        // para que se pueda establecer un funcionamiento adecuado del preview.
+        this.lastMove = null;
+
         switch(this.photo) {
             case 'gly-01':
                 this.glyph_preview = this.add.image(1020, 436, 'gly-01');
@@ -514,28 +509,6 @@ class Game extends Phaser.Scene {
 		this.photo = nextPhoto;
 		this.iterations = iterations;
 		this.startPuzzle(nextPhoto, size, size);
-
-        /* this.reveal = this.add.image(this.pieces.x, this.pieces.y, nextPhoto).setOrigin(0, 0);
-        this.reveal.setPostPipeline('WipePostFX');
-
-		const pipeline = this.reveal.getPostPipeline('WipePostFX');
-        pipeline.setTopToBottom();
-        pipeline.setRevealEffect();
-
-        this.tweens.add({
-            targets: pipeline,
-            progress: 1,
-            duration: 2000,
-            onComplete: () => {
-
-                this.photo = nextPhoto;
-                this.iterations = iterations;
-                this.reveal.destroy();
-
-                this.startPuzzle(nextPhoto, size, size);
-
-            }
-        }); */
     }
 
     invokeTime(){
@@ -546,7 +519,6 @@ class Game extends Phaser.Scene {
         setTimeout(() => {
             this.nextRound();
         }, 5050);
-        //this.scene.start('invoke');
     }
 
 	update(){
